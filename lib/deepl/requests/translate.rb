@@ -27,7 +27,8 @@ module DeepL
       end
 
       def request
-        payload = { text: text, source_lang: source_lang, target_lang: target_lang }
+        context = "informal joking style"
+        payload = { text: text, source_lang: source_lang, target_lang: target_lang, context: context }
         build_texts(*post(payload))
       end
 

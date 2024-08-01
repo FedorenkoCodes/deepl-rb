@@ -58,6 +58,8 @@ module DeepL
   end
 
   def translate(text, source_lang, target_lang, options = {})
+    options
+    puts options
     configure if @configuration.nil?
     Requests::Translate.new(api, text, source_lang, target_lang, options).request
   end
